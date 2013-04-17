@@ -1,0 +1,445 @@
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (59.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (18.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePrograms (20130318030416)
+  [1m[35m (0.6ms)[0m  CREATE TABLE "programs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130318030416')[0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("programs")
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-03-17 20:07:11 -0700
+
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (22.6ms)
+
+
+Started GET "/program" for 127.0.0.1 at 2013-03-17 20:07:13 -0700
+
+ActionController::RoutingError (No route matches [GET] "/program"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/programs" for 127.0.0.1 at 2013-03-17 20:07:16 -0700
+  Processing by ProgramsController#index as HTML
+  [1m[36mProgram Load (0.1ms)[0m  [1mSELECT "programs".* FROM "programs" [0m
+Rendered programs/index.html.erb within layouts/application (0.9ms)
+Compiled application.css  (1ms)  (pid 2914)
+Compiled programs.css  (9ms)  (pid 2914)
+Compiled scaffolds.css  (40ms)  (pid 2914)
+Compiled application.js  (4ms)  (pid 2914)
+Compiled jquery.js  (13ms)  (pid 2914)
+Compiled jquery_ujs.js  (0ms)  (pid 2914)
+Compiled programs.js  (1527ms)  (pid 2914)
+Completed 200 OK in 1673ms (Views: 1671.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-17 20:07:18 -0700
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/programs.css?body=1" for 127.0.0.1 at 2013-03-17 20:07:18 -0700
+Served asset /programs.css - 200 OK (28ms)
+
+
+Started GET "/assets/programs.js?body=1" for 127.0.0.1 at 2013-03-17 20:07:18 -0700
+Served asset /programs.js - 200 OK (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-17 20:07:18 -0700
+Served asset /jquery.js - 200 OK (99ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-17 20:07:18 -0700
+Served asset /scaffolds.css - 200 OK (33ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-17 20:07:18 -0700
+Served asset /jquery_ujs.js - 200 OK (19ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-17 20:07:18 -0700
+Served asset /application.js - 200 OK (80ms)
+
+
+Started GET "/programs/new" for 127.0.0.1 at 2013-03-17 20:08:15 -0700
+  Processing by ProgramsController#new as HTML
+Rendered programs/_form.html.erb (10.0ms)
+Rendered programs/new.html.erb within layouts/application (84.9ms)
+Completed 200 OK in 94ms (Views: 92.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-17 20:08:15 -0700
+Served asset /application.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-17 20:08:15 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/programs.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:15 -0700
+Served asset /programs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:15 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/programs.css?body=1" for 127.0.0.1 at 2013-03-17 20:08:15 -0700
+Served asset /programs.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:15 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:15 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/programs" for 127.0.0.1 at 2013-03-17 20:08:21 -0700
+  Processing by ProgramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FzIW1jUN7H7jblVzY+fc6HQqCFCQlqMmaYnTX3HH7II=", "program"=>{"name"=>"Computer Science"}, "commit"=>"Create Program"}
+  [1m[35mSQL (166.4ms)[0m  INSERT INTO "programs" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 18 Mar 2013 03:08:21 UTC +00:00], ["name", "Computer Science"], ["updated_at", Mon, 18 Mar 2013 03:08:21 UTC +00:00]]
+Redirected to http://localhost:3000/programs/1
+Completed 302 Found in 1223ms
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2013-03-17 20:08:22 -0700
+  Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.2ms)[0m  [1mSELECT "programs".* FROM "programs" WHERE "programs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered programs/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/programs.css?body=1" for 127.0.0.1 at 2013-03-17 20:08:22 -0700
+Served asset /programs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:22 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-17 20:08:22 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/programs.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:22 -0700
+Served asset /programs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:22 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-17 20:08:22 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:22 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/programs" for 127.0.0.1 at 2013-03-17 20:08:25 -0700
+  Processing by ProgramsController#index as HTML
+  [1m[35mProgram Load (0.0ms)[0m  SELECT "programs".* FROM "programs" 
+Rendered programs/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-17 20:08:25 -0700
+Served asset /application.css - 304 Not Modified (42ms)
+
+
+Started GET "/assets/programs.css?body=1" for 127.0.0.1 at 2013-03-17 20:08:26 -0700
+Served asset /programs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/programs.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:26 -0700
+Served asset /programs.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:26 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-17 20:08:26 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:26 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:26 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/programs/new" for 127.0.0.1 at 2013-03-17 20:08:33 -0700
+  Processing by ProgramsController#new as HTML
+Rendered programs/_form.html.erb (13.5ms)
+Rendered programs/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-17 20:08:33 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/programs.css?body=1" for 127.0.0.1 at 2013-03-17 20:08:33 -0700
+Served asset /programs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-17 20:08:33 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/programs.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:33 -0700
+Served asset /programs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:33 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:33 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:33 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/programs" for 127.0.0.1 at 2013-03-17 20:08:40 -0700
+  Processing by ProgramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FzIW1jUN7H7jblVzY+fc6HQqCFCQlqMmaYnTX3HH7II=", "program"=>{"name"=>"Computer Information Science"}, "commit"=>"Create Program"}
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "programs" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 18 Mar 2013 03:08:40 UTC +00:00], ["name", "Computer Information Science"], ["updated_at", Mon, 18 Mar 2013 03:08:40 UTC +00:00]]
+Redirected to http://localhost:3000/programs/2
+Completed 302 Found in 173ms
+
+
+Started GET "/programs/2" for 127.0.0.1 at 2013-03-17 20:08:40 -0700
+  Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProgram Load (0.1ms)[0m  SELECT "programs".* FROM "programs" WHERE "programs"."id" = ? LIMIT 1  [["id", "2"]]
+Rendered programs/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-17 20:08:40 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/programs.css?body=1" for 127.0.0.1 at 2013-03-17 20:08:40 -0700
+Served asset /programs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-17 20:08:40 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:40 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/programs.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:40 -0700
+Served asset /programs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:40 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:40 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/programs" for 127.0.0.1 at 2013-03-17 20:08:44 -0700
+  Processing by ProgramsController#index as HTML
+  [1m[36mProgram Load (0.2ms)[0m  [1mSELECT "programs".* FROM "programs" [0m
+Rendered programs/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-17 20:08:44 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/programs.css?body=1" for 127.0.0.1 at 2013-03-17 20:08:44 -0700
+Served asset /programs.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:44 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/programs.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:44 -0700
+Served asset /programs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-17 20:08:44 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:44 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-17 20:08:44 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-17 20:16:47 -0700
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (14.8ms)
+
+
+Started GET "/programs" for 127.0.0.1 at 2013-03-17 20:16:54 -0700
+  Processing by ProgramsController#index as HTML
+  [1m[36mProgram Load (0.3ms)[0m  [1mSELECT "programs".* FROM "programs" [0m
+Rendered programs/index.html.erb within layouts/application (9.0ms)
+Compiled application.css  (1ms)  (pid 3247)
+Compiled home.css  (13ms)  (pid 3247)
+Compiled application.js  (5ms)  (pid 3247)
+Compiled home.js  (850ms)  (pid 3247)
+Completed 200 OK in 981ms (Views: 979.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-17 20:16:55 -0700
+Served asset /application.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-03-17 20:16:55 -0700
+Served asset /home.css - 200 OK (37ms)
+
+
+Started GET "/assets/programs.css?body=1" for 127.0.0.1 at 2013-03-17 20:16:55 -0700
+Served asset /programs.css - 304 Not Modified (30ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-17 20:16:55 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-17 20:16:55 -0700
+Served asset /scaffolds.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-03-17 20:16:55 -0700
+Served asset /home.js - 200 OK (18ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-17 20:16:55 -0700
+Served asset /jquery.js - 304 Not Modified (34ms)
+
+
+Started GET "/assets/programs.js?body=1" for 127.0.0.1 at 2013-03-17 20:16:55 -0700
+Served asset /programs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-17 20:16:56 -0700
+Served asset /application.js - 200 OK (244ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-17 20:19:58 -0700
+
+ActionController::RoutingError (uninitialized constant WelcomeController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-17 20:20:10 -0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-17 20:20:10 -0700
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-03-17 20:20:10 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/programs.css?body=1" for 127.0.0.1 at 2013-03-17 20:20:10 -0700
+Served asset /programs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-17 20:20:10 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-17 20:20:10 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-17 20:20:10 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-03-17 20:20:10 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/programs.js?body=1" for 127.0.0.1 at 2013-03-17 20:20:10 -0700
+Served asset /programs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-17 20:20:10 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/programs" for 127.0.0.1 at 2013-03-17 20:20:13 -0700
+  Processing by ProgramsController#index as HTML
+  [1m[35mProgram Load (0.3ms)[0m  SELECT "programs".* FROM "programs" 
+Rendered programs/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 96ms (Views: 90.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-17 20:20:14 -0700
+Served asset /application.css - 304 Not Modified (38ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-03-17 20:20:14 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/programs.css?body=1" for 127.0.0.1 at 2013-03-17 20:20:14 -0700
+Served asset /programs.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-17 20:20:14 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-03-17 20:20:14 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-17 20:20:14 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-03-17 20:20:14 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/programs.js?body=1" for 127.0.0.1 at 2013-03-17 20:20:14 -0700
+Served asset /programs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-17 20:20:14 -0700
+Served asset /application.js - 304 Not Modified (0ms)
