@@ -1,0 +1,41 @@
+<h1>Listing assessments</h1>
+
+<table>
+  <tr>
+    <th>Assessmentid</th>
+    <th>Assessmenttool</th>
+    <th>Assessmentmeasure</th>
+    <th>Assessmentexpectation</th>
+    <th>Assessmentresult</th>
+    <th>Ploid</th>
+    <th>Userid</th>
+    <th>Assessmentyear</th>
+    <th>Assessmentsemester</th>
+    <th>Cloid</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @assessments.each do |assessment| %>
+  <tr>
+    <td><%= assessment.AssessmentID %></td>
+    <td><%= assessment.AssessmentTool %></td>
+    <td><%= assessment.AssessmentMeasure %></td>
+    <td><%= assessment.AssessmentExpectation %></td>
+    <td><%= assessment.AssessmentResult %></td>
+    <td><%= assessment.PLOID %></td>
+    <td><%= assessment.UserID %></td>
+    <td><%= assessment.AssessmentYear %></td>
+    <td><%= assessment.AssessmentSemester %></td>
+    <td><%= assessment.CLOID %></td>
+    <td><%= link_to 'Show', assessment %></td>
+    <td><%= link_to 'Edit', edit_assessment_path(assessment) %></td>
+    <td><%= link_to 'Destroy', assessment, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Assessment', new_assessment_path %>

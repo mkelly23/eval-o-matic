@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Assessmentid:</b>
+  <%= @assessment.AssessmentID %>
+</p>
+
+<p>
+  <b>Assessmenttool:</b>
+  <%= @assessment.AssessmentTool %>
+</p>
+
+<p>
+  <b>Assessmentmeasure:</b>
+  <%= @assessment.AssessmentMeasure %>
+</p>
+
+<p>
+  <b>Assessmentexpectation:</b>
+  <%= @assessment.AssessmentExpectation %>
+</p>
+
+<p>
+  <b>Assessmentresult:</b>
+  <%= @assessment.AssessmentResult %>
+</p>
+
+<p>
+  <b>Ploid:</b>
+  <%= @assessment.PLOID %>
+</p>
+
+<p>
+  <b>Userid:</b>
+  <%= @assessment.UserID %>
+</p>
+
+<p>
+  <b>Assessmentyear:</b>
+  <%= @assessment.AssessmentYear %>
+</p>
+
+<p>
+  <b>Assessmentsemester:</b>
+  <%= @assessment.AssessmentSemester %>
+</p>
+
+<p>
+  <b>Cloid:</b>
+  <%= @assessment.CLOID %>
+</p>
+
+
+<%= link_to 'Edit', edit_assessment_path(@assessment) %> |
+<%= link_to 'Back', assessments_path %>

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  AssessmentID: 
+  AssessmentTool: MyString
+  AssessmentMeasure: MyString
+  AssessmentExpectation: MyString
+  AssessmentResult: MyString
+  PLOID: 
+  UserID: 
+  AssessmentYear: 
+  AssessmentSemester: MyString
+  CLOID: 
+
+two:
+  AssessmentID: 
+  AssessmentTool: MyString
+  AssessmentMeasure: MyString
+  AssessmentExpectation: MyString
+  AssessmentResult: MyString
+  PLOID: 
+  UserID: 
+  AssessmentYear: 
+  AssessmentSemester: MyString
+  CLOID: 
